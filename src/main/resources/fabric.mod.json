@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "gpu_tape",
+	"version": "${version}",
+	"name": "ToadLib",
+	"description": "Fixes VRAM leaks. Based on VideoTape, improved by Mr.Toad",
+	"credits": [
+		"Velum"
+	],
+	"authors": [
+		"Mr.Toad"
+	],
+	"contact": {
+	},
+	"license": "GPL V3",
+	"icon": "assets/logo.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.mr_toad.gpu_tape.client.VideoTape"
+		]
+	},
+	"mixins": [
+		"gpu_tape.mixins.json"
+	],
+	"depends": {
+		"fabric-api": "*",
+		"java": ">=17"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": true,
+			"links": {
+				"modmenu.kofi": "https://ko-fi.com/mr_toad"
+			}
+		}
+	}
+}
