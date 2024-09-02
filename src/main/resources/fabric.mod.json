@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "gpu_tape",
 	"version": "${version}",
-	"name": "ToadLib",
+	"name": "GpuTape",
 	"description": "Fixes VRAM leaks. Based on VideoTape, improved by Mr.Toad",
 	"credits": [
 		"Velum"
