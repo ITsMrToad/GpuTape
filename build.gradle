@@ -14,9 +14,6 @@ dependencies {
 		exclude module: "fabric-api"
 	}
 
-	modApi("maven.modrinth:toadlib:${project.toadlib_version}") {
-		exclude module: "fabric-api"
-	}
 }
 
 base {
@@ -58,18 +55,6 @@ repositories {
 		name = "TerraformersMC"
 		url = "https://maven.terraformersmc.com/releases"
 
-	}
-
-	exclusiveContent {
-		forRepository {
-			maven {
-				name = "Modrinth"
-				url = "https://api.modrinth.com/maven"
-			}
-		}
-		filter {
-			includeGroup "maven.modrinth"
-		}
 	}
 }
 
