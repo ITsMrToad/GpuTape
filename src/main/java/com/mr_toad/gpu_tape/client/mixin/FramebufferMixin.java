@@ -26,7 +26,7 @@ public abstract class FramebufferMixin implements Cleaner.Cleanable {
                 VideoTape.FRAMEBUFFERS.add(new Framebuffer(this.useDepthAttachment) {});
             }
         } catch (Exception e) {
-            throw new CleanException(() -> "Failed to finalize/clean '" + this + "'", e);
+            throw new CleanException("Failed to finalize/clean '" + this + "'", e);
         }
     }
 
