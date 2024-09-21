@@ -16,7 +16,7 @@
 	"icon": "assets/logo.png",
 	"environment": "client",
 	"entrypoints": {
-		"main": [
+		"client": [
 			"com.mr_toad.gpu_tape.client.VideoTape"
 		]
 	},
