@@ -3,7 +3,7 @@
 <img align="left" width="130" src="https://github.com/intergrav/devins-badges/blob/v3/assets/cozy/supported/forge_vector.svg">
 <img align="left" width="130" src="https://github.com/intergrav/devins-badges/blob/v3/assets/cozy/supported/fabric_64h.png">
 <img align="left" width="130" src="https://github.com/intergrav/devins-badges/blob/v3/assets/cozy/supported/quilt_64h.png">
-<img align="right" width="150" src="src/main/resources/assets/logo.png">
+<img align="right" width="150" src="src/main/resources/logo.png">
 
 <br />
 <br />
