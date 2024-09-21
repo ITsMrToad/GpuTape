@@ -1,6 +1,6 @@
 package com.mr_toad.gpu_tape.client.mixin;
 
-import com.mr_toad.gpu_tape.client.VideoTape;
+import com.mr_toad.gpu_tape.client.GpuTape;
 import com.mr_toad.gpu_tape.client.error.CleanException;
 import net.minecraft.client.gl.Framebuffer;
 import net.minecraft.util.math.MathHelper;
@@ -23,7 +23,7 @@ public abstract class FramebufferMixin implements Cleaner.Cleanable {
     public void clean() {
         try {
             if (this.colorAttachment > -1 || this.depthAttachment > -1 || this.fbo > -1) {
-                VideoTape.FRAMEBUFFERS.add(new Framebuffer(this.useDepthAttachment) {});
+                GpuTape.FRAMEBUFFERS.add(new Framebuffer(this.useDepthAttachment) {});
             }
         } catch (Exception e) {
             throw new CleanException("Failed to finalize/clean '" + this + "'", e);
