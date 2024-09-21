@@ -5,7 +5,7 @@ import com.mojang.blaze3d.platform.GlConst;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gl.Framebuffer;
@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class VideoTape implements ModInitializer {
+public class GpuTape implements ClientModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger("VideoTape");
 	public static final String MODID = "video_tape_resurrected";
