@@ -16,41 +16,31 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class GpuTape implements ClientModInitializer {
 
-	public static final Logger LOGGER = LoggerFactory.getLogger("VideoTape");
-	public static final String MODID = "video_tape_resurrected";
-
-	public static final ConcurrentLinkedQueue<Framebuffer> FRAMEBUFFERS = Queues.newConcurrentLinkedQueue();
+	public static final ConcurrentLinkedQueue<FramebufferFixer> FIXERS = Queues.newConcurrentLinkedQueue();
 
 	@Override
 	public void onInitialize() {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			boolean done = false;
-			int counter = 0;
-
-			while(!FRAMEBUFFERS.isEmpty() && counter++ < 20) {
-				if (!done) {
-					GlStateManager._bindTexture(0);
-					GlStateManager._glBindFramebuffer(36160, 0);
-					done = true;
-				}
-
-				Framebuffer ids = FRAMEBUFFERS.poll();
-				if (ids != null) {
-					if (ids.getColorAttachment() > -1) {
-						TextureUtil.releaseTextureId(ids.getColorAttachment());
-					}
-
-					if (ids.getDepthAttachment() > -1) {
-						TextureUtil.releaseTextureId(ids.getDepthAttachment());
-					}
-
-					if (ids.fbo > -1) {
-						GlStateManager._glBindFramebuffer(GlConst.GL_FRAMEBUFFER, 0);
-						GlStateManager._glDeleteFramebuffers(ids.fbo);
+			try {
+				boolean done = false;
+				int counter = 0;
+				while(!FIXERS.isEmpty() && counter++ < 20) {
+					FramebufferFixer fixer = FIXERS.poll();
+					if (fixer != null) {
+						if (!done) {
+							fixer.destroy();
+							done = true;
+						}
+						fixer.release();
 					}
 				}
+			} catch (Exception e) {
+				throw new CleanException("Failed to proccess cleaning framebuffer!", e);
 			}
 		});
 	}
 
+        public static boolean isVulkan() {
+		return FabricLoader.getInstance().isModLoaded("vulkanmod");
+	}
 }
