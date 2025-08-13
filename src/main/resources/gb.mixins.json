@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.mr_toad.gpu_booster.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "gb.refmap.json",
+  "minVersion": "0.8",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "FramebufferMixin",
+    "vulkan.GlFramebufferMixin"
+  ]
+}
