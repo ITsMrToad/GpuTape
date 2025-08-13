@@ -1,6 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.6-SNAPSHOT'
-	id 'maven-publish'
+	id 'fabric-loom' version '1.8-SNAPSHOT'
 }
 
 dependencies {
@@ -14,6 +13,11 @@ dependencies {
 		exclude module: "fabric-api"
 	}
 
+	modImplementation ("maven.modrinth:vulkanmod:${project.vulkan}")
+
+    modApi("maven.modrinth:toadlib:${project.toadlib_version}") {
+        exclude module: "fabric-api"
+    }
 }
 
 base {
@@ -23,7 +27,7 @@ base {
 }
 
 loom {
-	mixin.defaultRefmapName = "gpu_tape.refmap.json"
+	mixin.defaultRefmapName = "gb.refmap.json"
 }
 
 processResources {
@@ -35,13 +39,13 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
 	withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
@@ -66,14 +70,5 @@ repositories {
 		name = "TerraformersMC"
 		url = "https://maven.terraformersmc.com/releases"
 
-	}
-}
-
-publishing {
-	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
-			from components.java
-		}
 	}
 }
