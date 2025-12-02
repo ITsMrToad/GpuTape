@@ -1,12 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "gpu_tape",
+	"id": "gpu_booster",
 	"version": "${version}",
-	"name": "GpuTape",
-	"description": "Fixes VRAM leaks. Based on VideoTape, improved by Mr.Toad",
-	"credits": [
-		"Velum"
-	],
+	"name": "GPUBooster",
+	"description": "Performance mod. Provides OpenGL 4+ features",
 	"authors": [
 		"Mr.Toad"
 	],
@@ -17,22 +14,24 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-			"com.mr_toad.gpu_tape.client.VideoTape"
+			"com.mr_toad.gpu_booster.client.GPUBooster"
+		],
+		"modmenu": [
+			"com.mr_toad.gpu_booster.modmenu.GPUBoosterModMenu"
 		]
 	},
 	"mixins": [
-		"gpu_tape.mixins.json"
+		"gb.mixins.json",
+    	"gb.tgl.mixins.json"
 	],
 	"depends": {
 		"fabric-api": "*",
+		"toadlib": "*",
 		"java": ">=17"
 	},
 	"custom": {
 		"modmenu": {
-			"update_checker": true,
-			"links": {
-				"modmenu.kofi": "https://ko-fi.com/mr_toad"
-			}
+			"update_checker": true
 		}
 	}
 }
