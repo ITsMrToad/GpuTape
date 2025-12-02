@@ -1,0 +1,10 @@
+name: Question
+description: Ask a question about GPUBooster.
+labels: [Question]
+assignees: ITsMrToad
+body:
+  - type: textarea
+    attributes:
+      label: Question
+    validations:
+      required: true
