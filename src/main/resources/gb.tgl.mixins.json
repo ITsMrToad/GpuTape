@@ -1,6 +1,7 @@
 {
   "required": true,
-  "package": "com.mr_toad.gpu_booster.core.mixin.gl_specify",
+  "package": "com.mr_toad.gpu_booster.core.mixin.tgl",
+  "plugin": "com.mr_toad.gpu_booster.client.mixin.tgl.TGLMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "refmap": "gb.refmap.json",
   "minVersion": "0.8",
@@ -9,6 +10,6 @@
     "defaultRequire": 1
   },
   "client": [
-    "ShapeIndexBufferMixin"
+    "WindowMixin"
   ]
 }
