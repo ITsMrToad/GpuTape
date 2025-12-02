@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a bug in GPUBooster
+labels: [Bug]
+assignees: ITsMrToad
+body:
+  - type: checkboxes
+    attributes:
+      label: Please confirm the following.
+      options:
+        - label: I confirm that i am using latest version of mod.
+          required: true
+        - label: I provided list of mods and crash-report/logs.
+          required: true
+  - type: dropdown
+    id: oses
+    attributes:
+      label: What operating systems are you seeing the problem on?
+      multiple: true
+      options:
+        - Windows
+        - MacOS
+        - Linux
+  - type: dropdown
+    id: loaders
+    attributes:
+      label: What the loader are you seeing the problem on?
+      multiple: true
+      options:
+        - Forge
+        - Fabric
+        - Quilt
+        - NeoForge
+  - type: textarea
+    attributes:
+      label: Describe the bug
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior.
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: What version of the palladium are you using?
+    validations:
+      required: true
