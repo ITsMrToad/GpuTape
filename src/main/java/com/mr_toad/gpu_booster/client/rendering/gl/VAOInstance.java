@@ -1,11 +1,9 @@
 package com.mr_toad.gpu_booster.client.rendering.gl;
 
-import com.google.common.annotations.Beta;
 import com.mojang.blaze3d.platform.GlConst;
 import net.minecraft.client.render.VertexFormat;
 import net.minecraft.client.render.VertexFormatElement;
 
-@Beta
 public class VAOInstance {
 
     private final VertexFormat format;
@@ -57,3 +55,4 @@ public class VAOInstance {
         return this.format.hashCode();
     }
 }
+
