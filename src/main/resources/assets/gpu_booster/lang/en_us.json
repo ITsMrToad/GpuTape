@@ -1,0 +1,18 @@
+{
+  "gb.config.rbo_depth": "RBO depth",
+  "gb.config.rbo_depth.deprecated.unsupported": "RBO is unsupported by your GPU!",
+  "gb.config.rbo_depth.deprecated.iris": "RBO is not compatible with Iris and shaders!",
+  "gb.config.fastmath": "Fast math",
+  "gb.config.fastrand": "Fast random",
+  "gb.config.dsa": "Direct state access",
+  "gb.config.dsa.disabled": "off",
+  "gb.config.dsa.fbo": "FBO only",
+  "gb.config.dsa.vbo": "VBO only",
+  "gb.config.dsa.all": "all",
+  "gb.config.dsa.deprecated.unsupported": "DSA is unsupported by your GPU!",
+  "gb.config.dsa.deprecated.world_loaded": "Minecraft world is already loaded!",
+  "gb.config.vfc": "Vertex format cache",
+  "gb.config.vfc.tooltip": "Caches vertex format for entities and world. Extremely unstable!",
+  "gb.config.render_cycle_pool": "Render cycle pool size",
+  "gb.config.render_cycle_pool.deprecated": "DSA is off!"
+}

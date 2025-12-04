@@ -1,0 +1,20 @@
+{
+  "modmenu.descriptionTranslation.gpu_tape": "Добавляет быструю математику, быстрые случайные вычисления и функции GL-4+",
+
+  "gb.config.rbo_depth": "Глубина RBO",
+  "gb.config.rbo_depth.deprecated.unsupported": "RBO не поддерживается вашим ГП!",
+  "gb.config.rbo_depth.deprecated.iris": "RBO не совместим с Iris и шейдерами!",
+  "gb.config.fastmath": "Быстрая математичка",
+  "gb.config.fastrand": "Быстрые случайные вычисления",
+  "gb.config.dsa": "Прямой доступ к буферам",
+  "gb.config.dsa.disabled": "выключен",
+  "gb.config.dsa.fbo": "только FBO",
+  "gb.config.dsa.vbo": "только VBO",
+  "gb.config.dsa.all": "всё",
+  "gb.config.dsa.deprecated.unsupported": "DSA не поддерживается вашим ГП!",
+  "gb.config.dsa.deprecated.world_loaded": "Внутриигровой мир уже загружен!",
+  "gb.config.vfc": "Кеш формата вершин",
+  "gb.config.vfc.tooltip": "Кеширует формат вершин для сущностей и мира. Крайне нестабилен!",
+  "gb.config.render_cycle_pool": "Размер пула цикла рендера",
+  "gb.config.render_cycle_pool.deprecated": "DSA выключен."
+}
