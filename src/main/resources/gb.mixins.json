@@ -5,12 +5,23 @@
   "refmap": "gb.refmap.json",
   "minVersion": "0.8",
   "mixins": [
+    "math.GivensPairMixin",
+    "math.MathHelperMixin",
+    "random.CheckedRandomMixin",
+    "random.LocalRandomMixin",
+    "random.ThreadSafeRandomMixin",
+    "random.Xoroshiro128PlusPlusRandomMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "FramebufferMixin",
-    "vulkan.GlFramebufferMixin"
+    "dsa.BufferBuilderMixin",
+    "dsa.FramebufferMixin",
+    "dsa.VertexBufferMixin",
+    "dsa.WindowFramebufferMixin",
+    "math.BufferRendererMixin",
+    "math.MatrixStackEntryMixin",
+    "math.ShaderProgramMixin"
   ]
 }
