@@ -60,9 +60,13 @@ public class GBFMath {
     }
 
     public static float fastLog(float x) {
-        return (Float.floatToRawIntBits(x) - 1064866805) * 0.00009015944F;
+        int bits = Float.floatToIntBits(x);
+        int exp = ((bits >> 23) & 255) - 127;
+        float mant = (bits & 0x7FFFFF) / (float) (1 << 23);
+        float log2 = exp + mant - mant * mant * 0.346607F;
+        return log2 * 0.69314718F;
     }
-
+    
     public static float fastExp(float x) {
         if (x <= -8F) {
             return 0F;
@@ -76,3 +80,4 @@ public class GBFMath {
         }
     }
 }
+
